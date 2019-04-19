@@ -1,0 +1,31 @@
+<div class="nav-holder">
+  <i class="fa fa-bars menu" (click)="toggleMenu()"></i>
+  <label>Sketch Pad</label>
+  <i class="fa fa-save"></i>
+
+
+  <div class="float-right login-logout-content">
+    <span><span class="login-logout-text">Log in </span><i class="fa fa-sign-in"></i></span>
+  </div>
+</div>
+
+<div class="side-menu" *ngIf="showSideMenu">
+  <div>
+    <label>Colors</label>
+    <ul class="color-list row">
+      <li class="col-md-3" *ngFor="let color of colors" [ngClass]="{'selected': color === selectedColor}" >
+        <div class="color-cube" (click)="handleSelectColor(color);" [ngStyle]="{'background-color': '#'+color}"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="list-holder">
+    <label>Brushes ({{selectedBrushSize}}px)</label>
+    <div class="brush-holder">
+        <input type="range" [(ngModel)]="selectedBrushSize"  min="1" max="50"  (change)="handleInput()"/>
+        <div class="brush-preview"><span class="brush"></span></div>
+
+    </div>
+  </div>
+
+</div>
