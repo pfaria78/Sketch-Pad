@@ -1,12 +1,12 @@
 import { Component, OnInit, HostListener, ElementRef } from "@angular/core";
-import { ToolService } from "./tool-service.service";
+import { ToolService } from "../components/tools/tool-service.service";
 
 @Component({
-  selector: "app-tool-box",
-  templateUrl: "./tool-box.component.html",
-  styleUrls: ["./tool-box.component.scss"]
+  selector: "nav-bar",
+  templateUrl: "./nav-bar.html",
+  styleUrls: ["./nav-bar.scss"]
 })
-export class ToolBoxComponent implements OnInit {
+export class NavBarComponent implements OnInit {
   showSideMenu: boolean = true;
   selectedBrushSize = this.toolService.getBrushSize();
   selectedColor = this.toolService.getColor();

@@ -9,7 +9,7 @@ import {
 } from "@angular/core";
 import { Subscription, fromEvent } from "rxjs";
 import { pairwise, switchMap, takeUntil } from "rxjs/operators";
-import { ToolService } from "src/app/tool-box/tool-service.service";
+import { ToolService } from "src/app/components/tools/tool-service.service";
 
 @Component({
   selector: "app-canvas",
