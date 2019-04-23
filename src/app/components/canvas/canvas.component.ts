@@ -7,7 +7,7 @@ import {
   ElementRef,
   HostListener
 } from "@angular/core";
-import { Subscription, fromEvent } from "rxjs";
+import { Subscription, fromEvent, Observable } from "rxjs";
 import { pairwise, switchMap, takeUntil } from "rxjs/operators";
 import { ToolService } from "src/app/components/tools/tool-service.service";
 
@@ -56,6 +56,7 @@ export class CanvasComponent implements AfterViewInit, OnDestroy {
         switchMap(e => {
           this.cx.lineWidth = this.toolService.getBrushSize();
           this.cx.strokeStyle = "#" + this.toolService.getColor();
+
           // after a mouse down, we'll record all mouse moves
           return fromEvent(canvasEl, "mousemove").pipe(
             // we'll stop (and unsubscribe) once the user releases the mouse

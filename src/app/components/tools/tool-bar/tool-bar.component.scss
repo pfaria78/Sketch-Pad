@@ -1,0 +1,53 @@
+@import '../../../../styles/common.scss';
+:host{
+  display:flex;
+  flex-direction: column;
+  width:35px;
+  height:200px;
+  border: 1px solid $gray-light;
+  box-shadow: 3px 3px 5px $gray;
+  position: absolute;
+  left: 10px;
+  top: 100px;
+}
+
+header{
+  height:20px;
+  background-color: $gray-lightest;
+  margin-bottom: 5px;
+}
+
+.drawing-tools{
+  margin:0;
+  padding:0;
+  height:70px;
+
+
+  li{
+    display:block;
+    border: 1px solid $gray-light;
+    padding: 0px 6px;
+    margin: 0 auto;
+    font-size: 21px;
+    cursor:pointer;
+    color:$gray-light;
+    height:30px;
+
+
+    &.selected{
+      border:1px solid $blue;
+      border-radius: 6px;
+      color:$blue;
+
+    }
+  }
+}
+
+.color{
+  display: block;
+  width: 33px;
+  height: 33px;
+  border: 1px solid $gray-light;
+  position: absolute;
+  bottom:2px
+}

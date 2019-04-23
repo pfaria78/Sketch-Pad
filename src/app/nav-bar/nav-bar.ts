@@ -7,7 +7,7 @@ import { ToolService } from "../components/tools/tool-service.service";
   styleUrls: ["./nav-bar.scss"]
 })
 export class NavBarComponent implements OnInit {
-  showSideMenu: boolean = true;
+  showSideMenu: boolean = false;
   selectedBrushSize = this.toolService.getBrushSize();
   selectedColor = this.toolService.getColor();
 

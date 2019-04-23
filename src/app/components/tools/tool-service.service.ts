@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
+import { DrawingTool } from './models/drawing-tool';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToolService {
 
-  brushSize:number =3;
+  brushSize:number = 14;
   brushColor:string = '666666';
+  selectedTool:DrawingTool;
 
   constructor() { }
 
@@ -25,5 +27,14 @@ export class ToolService {
 
   getColor():string{
     return this.brushColor;
+  }
+
+
+  setSelectedTool(val:DrawingTool){
+    this.selectedTool = val;
+  }
+
+  getSelectedTool():DrawingTool{
+    return this.selectedTool;
   }
 }
