@@ -4,13 +4,16 @@ import { AppComponent } from "./app.component";
 import { NavBarComponent } from "./nav-bar/nav-bar";
 import { CanvasComponent } from "./components/canvas/canvas.component";
 import { FormsModule } from '@angular/forms';
-import {NgbModule, NgbPopover, NgbPopoverModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ToolBarComponent } from './components/tools/tool-bar/tool-bar.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
+import { ColorPickerModule } from 'ngx-color-picker';
+
 
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, CanvasComponent, ToolBarComponent],
-  imports: [BrowserModule, FormsModule, NgbModule, NgbPopoverModule],
+  declarations: [AppComponent, NavBarComponent, CanvasComponent, ToolBarComponent, ColorPickerComponent],
+  imports: [BrowserModule, FormsModule, NgbModule, ColorPickerModule],
   providers: [],
   bootstrap: [AppComponent]
 })

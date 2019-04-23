@@ -43,7 +43,7 @@ export class CanvasComponent implements AfterViewInit, OnDestroy {
     // set some default properties about the line
     this.cx.lineWidth = this.toolService.getBrushSize();
     this.cx.lineCap = "round";
-    this.cx.strokeStyle = "#" + this.toolService.getColor();
+    this.cx.strokeStyle =  this.toolService.getColor();
 
     // we'll implement this method to start capturing mouse events
     this.captureEvents(this.canvasEl);
@@ -55,7 +55,7 @@ export class CanvasComponent implements AfterViewInit, OnDestroy {
       .pipe(
         switchMap(e => {
           this.cx.lineWidth = this.toolService.getBrushSize();
-          this.cx.strokeStyle = "#" + this.toolService.getColor();
+          this.cx.strokeStyle = this.toolService.getColor();
 
           // after a mouse down, we'll record all mouse moves
           return fromEvent(canvasEl, "mousemove").pipe(

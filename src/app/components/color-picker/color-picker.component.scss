@@ -1,0 +1,16 @@
+@import '../../../styles/common.scss';
+
+
+:host{
+  display:block;
+  border: 1px solid $gray-light;
+  position: absolute;
+  bottom:2px
+}
+
+
+.color{
+  width: 32px;
+  height: 33px;
+  cursor: pointer;
+}

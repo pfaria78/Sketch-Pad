@@ -1,0 +1,11 @@
+<ng-template #popTitle>Title</ng-template>
+<ng-template #popContent>
+
+  colors and color picker thingy goes here.
+
+
+</ng-template>
+
+<input class="color" [(colorPicker)]="selectedColor" (colorPickerChange)="onColorChange($event)"
+       [style.background]="selectedColor"/>
+

@@ -1,0 +1,16 @@
+@import "./common.scss";
+
+.popover {
+  width: 300px;
+
+  .popover-header{
+    font-size: 16px;
+    padding: 5px;
+    margin:5px;
+  }
+
+  .popover-body{
+    padding:5px;
+    border-top: 1px solid $gray-lightest;
+  }
+}

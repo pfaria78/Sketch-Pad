@@ -7,7 +7,7 @@ import { DrawingTool } from './models/drawing-tool';
 export class ToolService {
 
   brushSize:number = 14;
-  brushColor:string = '666666';
+  brushColor:string = '#666666';
   selectedTool:DrawingTool;
 
   constructor() { }

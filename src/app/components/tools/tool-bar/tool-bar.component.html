@@ -5,13 +5,12 @@
 
   <ul class="drawing-tools">
     <li *ngFor="let drawingTool of drawingTools" title="{{drawingTool.name}}"
-    [ngClass]="{'selected': drawingTool === selectedTool}"
-    (click)="onToolItemClicked(drawingTool);">
+      [ngClass]="{'selected': drawingTool === selectedTool}" (click)="onToolItemClicked(drawingTool);">
       <div class="fa fa-{{drawingTool.icon}}"></div>
     </li>
   </ul>
 
-  <div class="color" [ngStyle]="{'background-color': '#'+selectedColor}"></div>
+  <color-picker></color-picker>
 
 
 </div>
